@@ -1,0 +1,37 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+  <diagram name="Страница — 1" id="5ueDUZ-bWRekXDA2F1c9">
+    <mxGraphModel dx="1050" dy="2959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="49U6OE98zjIUnl4-Dof1-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=JetBrains Mono;fontSize=12;" edge="1" parent="1" source="49U6OE98zjIUnl4-Dof1-2" target="49U6OE98zjIUnl4-Dof1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-2" value="Инициализация модели" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=JetBrains Mono;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-2320" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;fontSize=12;" edge="1" parent="1" source="49U6OE98zjIUnl4-Dof1-5" target="49U6OE98zjIUnl4-Dof1-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-5" value="Генерация массива&lt;div&gt;траекторных отклонений&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontFamily=JetBrains Mono;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-2240" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;fontSize=12;" edge="1" parent="1" source="49U6OE98zjIUnl4-Dof1-7" target="49U6OE98zjIUnl4-Dof1-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-7" value="Генерация голограммы" style="whiteSpace=wrap;html=1;rounded=1;fontFamily=JetBrains Mono;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-2160" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;fontSize=12;" edge="1" parent="1" source="49U6OE98zjIUnl4-Dof1-8" target="49U6OE98zjIUnl4-Dof1-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-8" value="Синтез РЛИ &lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;алгоритмом ДДА&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;без/с компенсацией ТН&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;fontFamily=JetBrains Mono;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-2080" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="49U6OE98zjIUnl4-Dof1-9" value="Анализ полученного изображения и контроль качества" style="whiteSpace=wrap;html=1;rounded=1;fontFamily=JetBrains Mono;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="-2000" width="240" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
