@@ -1,0 +1,37 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
+  <diagram name="Страница — 1" id="2IZvxh4MxJENO0PkMHxY">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;" edge="1" parent="1" source="-YNUz9eb2pnEzJheFOgL-1" target="-YNUz9eb2pnEzJheFOgL-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-1" value="РЛИ" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;" edge="1" parent="1" source="-YNUz9eb2pnEzJheFOgL-3" target="-YNUz9eb2pnEzJheFOgL-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-3" value="Выделение портрета отклика выбранной цели" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;" edge="1" parent="1" source="-YNUz9eb2pnEzJheFOgL-4" target="-YNUz9eb2pnEzJheFOgL-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-4" value="Интерполяция путём добавления нулей в частотной области" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+          <mxGeometry x="200" y="310" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;" edge="1" parent="1" source="-YNUz9eb2pnEzJheFOgL-5" target="-YNUz9eb2pnEzJheFOgL-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-5" value="Сечение портрета по азимуту и дальности" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+          <mxGeometry x="200" y="400" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-YNUz9eb2pnEzJheFOgL-6" value="Параметры функции&lt;div&gt;отклика цели&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="200" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
