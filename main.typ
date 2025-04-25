@@ -378,7 +378,8 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
 
 При исследовании алгоритмов компенсации определяется изменение измеренного разрешения по азимуту (как основной параметр функции отклика) при увеличении амплитуды траекторных отклонений. Данная зависимость исследуется при изменении других параметров ТН, таких как период или вид функции отклонения. На основании данных измерений делается вывод о допустимой величине ТН для каждого алгоритма и пределах применимости данных алгоритмов.
 
-#let threshold = 1.3
+#let threshold_res = 1.3
+#let threshold_slr = 0.5
 
 Значения параметров модели, использованные при симуляциях, приведены в таблице @tab:sim_params. 
 #figure(
@@ -639,12 +640,12 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
    caption: [Параметры функций отклика полученных РЛИ целей]
  )<tab:prec_corr_target_params>
 
-Теперь проведём симуляции во для всех значений параметров ТН и построим соответствующую зависимость измеренного разрешения по азимуту от амплитуды и частоты ТН, которая изображена на рисунке @fig:prec_corr_graph. Каждая точка на графике отображает усреднённое по всем целям разрешение. Как и было предсказано, на графики видно экспоненциальное ухудшение разрешения при увеличении амплитуды ТН, а увеличение числа периодов не влияет существенно на вид зависимости.
+Теперь проведём симуляции во для всех значений параметров ТН и построим соответствующую зависимость измеренного разрешения по азимуту от амплитуды и частоты ТН, которая изображена на рисунке @fig:prec_corr_res_graph. Каждая точка на графике отображает усреднённое по всем целям разрешение. Как и было предсказано, на графики видно экспоненциальное ухудшение разрешения при увеличении амплитуды ТН.
 
 #let num_t = 3
 #let dis_ampl = read("images/prec_sim/T1_sim_params.txt").split("\n").at(0).split().map(float)
 #let num_res = dis_ampl.len()
-#let dis_freq = (1, 2, 3).map(it => it * read("images/prec_sim/T1_sim_params.txt").split("\n").at(2).split().map(float).at(0))
+#let dis_freq = (1, 2, 3).map(it => it * read("images/prec_sim/T1_sim_params.txt").split("\n").at(4).split().map(float).at(0))
 
 #figure(
   canvas({
@@ -655,9 +656,9 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
       x-label: "амплитуда ТН, м",
       y-label: "разрешение по азимуту, м",
       y-min: 0.3,
-      y-max: 0.7,
+      y-max: 0.5,
       x-grid: true,
-      y-grid: "both",
+      y-grid: true,
       //axis-style: "scientific",
       x-format: it => str(it).replace(".", ","),
       y-format: it => str(it).replace(".", ","),
@@ -672,7 +673,7 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
           )
         }
         plot.add(
-          dis_ampl.zip(num_res * (0.3 * threshold,)),
+          dis_ampl.zip(num_res * (0.3 * threshold_res,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
           )
       }
@@ -682,7 +683,83 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
   supplement: "Рисунок",
   kind: image,
   caption: [График зависимости измеренного разрешения по азимуту от амплитуды и частоты ТН; Горизонтальной линией обозначено критическое значение разрешения, после которого изображение считается существенно размытым],
-)<fig:prec_corr_graph>
+)<fig:prec_corr_res_graph>
+
+#figure(
+  canvas({
+    import draw: *
+
+    plot.plot(
+      legend: "inner-north-west",
+      x-label: "амплитуда ТН, м",
+      y-label: "PSLR, дБ",
+      y-min: -14,
+      y-max: 0,
+      x-grid: true,
+      y-grid: true,
+      //axis-style: "scientific",
+      x-format: it => str(it).replace(".", ","),
+      y-format: it => str(it).replace(".", ","),
+      size: (12, 8),
+      {
+        for i in range(num_t){
+          plot.add(
+          dis_ampl.zip(read("images/prec_sim/T" + str(i + 1) + "_sim_params.txt").split("\n").at(2).split().map(float)),
+          mark: "*",
+          label: "Периодов ТН: " + str(i + 1),
+          line: "spline",
+          )
+        }
+        plot.add(
+          dis_ampl.zip(num_res * (-13 * threshold_slr,)),
+          style: (stroke: (paint: red, dash: "densely-dashed")),
+          )
+      }
+    )
+  }),
+
+  supplement: "Рисунок",
+  kind: image,
+  caption: [График зависимости измеренного относительного уровня боковых лепестков от амплитуды и частоты ТН; Горизонтальной линией обозначено критическое значение, после которого изображение считается существенно размытым],
+)<fig:prec_corr_pslr_graph>
+
+#figure(
+  canvas({
+    import draw: *
+
+    plot.plot(
+      legend: "inner-north-west",
+      x-label: "амплитуда ТН, м",
+      y-label: "ISLR, дБ",
+      y-min: -11,
+      y-max: 11,
+      x-grid: true,
+      y-grid: true,
+      //axis-style: "scientific",
+      x-format: it => str(it).replace(".", ","),
+      y-format: it => str(it).replace(".", ","),
+      size: (12, 8),
+      {
+        for i in range(num_t){
+          plot.add(
+          dis_ampl.zip(read("images/prec_sim/T" + str(i + 1) + "_sim_params.txt").split("\n").at(3).split().map(float)),
+          mark: "*",
+          label: "Периодов ТН: " + str(i + 1),
+          line: "spline",
+          )
+        }
+        plot.add(
+          dis_ampl.zip(num_res * (-10 * threshold_slr,)),
+          style: (stroke: (paint: red, dash: "densely-dashed")),
+          )
+      }
+    )
+  }),
+
+  supplement: "Рисунок",
+  kind: image,
+  caption: [График зависимости измеренного интегрального уровня боковых лепестков по азимуту от амплитуды и частоты ТН; Горизонтальной линией обозначено критическое значение, после которого изображение считается существенно размытым],
+)<fig:prec_corr_islr_graph>
 
 /*
 === "Приближённый" метод <ref:ApproxCorr>

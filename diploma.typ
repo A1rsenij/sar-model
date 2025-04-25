@@ -11,7 +11,11 @@
     lang: "ru"
   )
   set par(
-    first-line-indent: 12.5mm
+    first-line-indent: (
+      amount: 12.5mm,
+      all: true
+    ),
+    justify: true,
   )
   set math.equation(numbering: "(1)")
 
