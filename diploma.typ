@@ -73,8 +73,11 @@
     true
   }
 
-  //set ref(supplement: "")
-  //show ref.where(target: <fig:product_formation>): set ref(supplement: "")
+  show figure.where(
+    kind: table
+  ): set figure.caption(position: top)
+
+  set figure.caption(separator: [ --- ])
   
   show ref: it => {
     let eq = math.equation
