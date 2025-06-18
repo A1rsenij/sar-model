@@ -21,7 +21,8 @@
 
   set heading(
     numbering: (..nums) => {
-      if nums.pos().len() > 1 {nums.pos().slice(1).map(str).join(".")}
+      if nums.pos().len() > 1 {nums.pos().map(str).join(".")}
+      else if nums.pos() != (0,) {"Глава " + nums.pos().map(str).join("") + "."}
       else {""}
     }
   )
@@ -30,14 +31,15 @@
     level: 1
   ): it => pad(left: 0mm)[
     #set align(center)
-    #set text(size: 14pt)
-    #it.body
+    #set text(14pt)
+    #let num = counter(heading).display()
+    #num #it.body
   ]
 
   show heading.where(
     level: 2
-  ): it => pad(left: 12.5mm)[
-    #set align(left)
+  ): it => pad(left: 0mm)[
+    #set align(center)
     #set text(14pt)
     #let num = counter(heading).display(it.numbering)
     #num #it.body
@@ -49,7 +51,7 @@
     #set align(left)
     #set text(14pt)
     #let num = counter(heading).display(it.numbering)
-    #num #it.body
+    #it.body
   ]
   let tab_counter = counter("tab_counter")
   tab_counter.update(1)
