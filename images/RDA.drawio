@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="875" dy="518" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="5" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -79,13 +79,13 @@
             <mxPoint x="480" y="40" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jhQMKRMtoGd_tm8R5ob7-27" value="&quot;базовый&quot; метод" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrains Mono;fontSize=12;fontColor=light-dark(#808080, #ededed);whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="jhQMKRMtoGd_tm8R5ob7-27" value="&quot;базовый&quot; метод" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrains Mono;fontSize=14;fontColor=light-dark(#808080, #ededed);whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="60" y="40" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jhQMKRMtoGd_tm8R5ob7-28" value="базовый алгоритм" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrains Mono;fontSize=12;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="jhQMKRMtoGd_tm8R5ob7-28" value="базовый алгоритм" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrains Mono;fontSize=14;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="280" y="40" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jhQMKRMtoGd_tm8R5ob7-29" value="&quot;приближённый&quot; метод" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrains Mono;fontSize=12;fontColor=light-dark(#808080, #ededed);whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="jhQMKRMtoGd_tm8R5ob7-29" value="&quot;приближённый&quot; метод" style="text;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrains Mono;fontSize=14;fontColor=light-dark(#808080, #ededed);whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="500" y="40" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="jhQMKRMtoGd_tm8R5ob7-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#808080;fontFamily=JetBrains Mono;fontSize=12;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jhQMKRMtoGd_tm8R5ob7-32" target="jhQMKRMtoGd_tm8R5ob7-13" edge="1">
