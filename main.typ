@@ -747,7 +747,7 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
     import draw: *
 
     plot.plot(
-      legend: "inner-north-west",
+      legend: "inner-north-east",
       x-label: "амплитуда ТН, м",
       y-label: "разрешение по азимуту, м",
       y-min: 0.3,
@@ -768,9 +768,19 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
           )
         }
         plot.add(
+          ((0.0, 0.33), (0.1, 0.8)),
+          mark: "*",
+          label: "Без компенсации",
+          line: "spline",
+          mark-style: (stroke: black),
+          style: (stroke: black),
+          )
+        plot.add(
           dis_ampl.zip(num_res * (0.3 * threshold_res,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
+          label: "Критерий"
           )
+
       }
     )
   }),
@@ -806,8 +816,17 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
           )
         }
         plot.add(
+          ((0.0, -13.5), (0.1, -1.0), (0.2, 0.0), (0.3, 0.0), (0.4, 0.0), (0.5, 0.0)),
+          mark: "*",
+          label: "Без компенсации",
+          line: "spline",
+          mark-style: (stroke: black),
+          style: (stroke: black),
+          )
+        plot.add(
           dis_ampl.zip(num_res * (threshold_pslr,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
+          label: "Критерий",
           )
       }
     )
@@ -844,8 +863,17 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
           )
         }
         plot.add(
+          ((0.0, -10.5), (0.1, 6.0), (0.2, 8.0), (0.3, 8.0), (0.4, 8.0), (0.5, 8.0)),
+          mark: "*",
+          label: "Без компенсации",
+          line: "spline",
+          mark-style: (stroke: black),
+          style: (stroke: black),
+          )
+        plot.add(
           dis_ampl.zip(num_res * (threshold_islr,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
+          label: "Критерий",
           )
       }
     )
@@ -943,6 +971,7 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
         plot.add(
           dis_ampl.zip(num_res * (0.3 * threshold_res,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
+          label: "Критерий"
           )
       }
     )
@@ -981,6 +1010,7 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
         plot.add(
           dis_ampl.zip(num_res * (threshold_pslr,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
+          label: "Критерий"
           )
       }
     )
@@ -1019,6 +1049,7 @@ dot &exp(j dot 4pi f_0 (Delta R_("diff")(eta)) / (c)) dot exp(j dot 4pi K_r tau 
         plot.add(
           dis_ampl.zip(num_res * (threshold_islr,)),
           style: (stroke: (paint: red, dash: "densely-dashed")),
+          label: "Критерий"
           )
       }
     )
